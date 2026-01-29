@@ -1,0 +1,28 @@
+package main
+
+import (
+    "fmt"
+)
+
+func calculernombres() int {
+    var nb int
+    var somme int
+    for i := 1; i <= 10; i++ {
+        fmt.Print("Ecire un nombre entre -100 et 100: ")
+        fmt.Scan(&nb)
+        if nb > -100 && nb < 100 {
+            somme = somme + nb
+        } else {
+            fmt.Print("Erreur: le nombre doit être compris entre -100 et 100: ")
+            fmt.Scan(&nb)
+            somme = somme + nb
+        }
+    }
+    return somme
+}
+
+func main() {
+    var somme int
+    somme = calculernombres()
+    fmt.Print(somme)
+}
