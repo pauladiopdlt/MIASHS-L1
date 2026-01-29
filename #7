@@ -1,0 +1,27 @@
+package main
+
+import (
+    "fmt"
+)
+
+func calculNPremiers(message string) int {
+    var n int
+    var produit = 1
+    fmt.Println(message)
+    fmt.Scan(&n)
+    for n < 0 {
+        fmt.Println("ERREUR.")
+        fmt.Println(message)
+        fmt.Scan(&n)
+    }
+    for i := 1; i <= n; i++ {
+        produit = produit * i
+    }
+    return produit
+}
+
+func main() {
+    var resultat int
+    resultat = calculNPremiers("Donner un nombre entier possitif : ")
+    fmt.Print("Le resultat est: ", resultat)
+}
