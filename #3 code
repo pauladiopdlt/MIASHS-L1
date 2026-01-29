@@ -1,0 +1,24 @@
+package main
+
+import (
+    "fmt"
+)
+
+func mineuroumajeur() string {
+    var reponse string
+    var age int
+    fmt.Print("Quel âge as-tu? ")
+    fmt.Scan(&age)
+    if age < 18 {
+        reponse = "tu es mineur"
+    } else {
+        reponse = "tu es majeur"
+    }
+    return reponse
+}
+
+func main() {
+    var reponse string
+    reponse = mineuroumajeur()
+    fmt.Print(reponse)
+}
