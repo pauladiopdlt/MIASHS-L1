@@ -1,0 +1,15 @@
+package main
+
+import (
+    "fmt"
+)
+
+func calculerAgeChat(annee, naissance int) int {
+    return annee-naissance
+}
+
+func main() {
+    var resultat int
+    resultat = calculerAgeChat(2025, 2019)
+    fmt.Println("Resultat", resultat)
+}
