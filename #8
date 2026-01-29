@@ -1,0 +1,26 @@
+package main
+
+import (
+    "fmt"
+)
+
+func plusGrand2(message1, message2 string) int {
+    var n1, n2 int
+    var grand int
+    fmt.Print(message1)
+    fmt.Scan(&n1)
+    fmt.Print(message2)
+    fmt.Scan(&n2)
+    if n1 < n2 {
+        grand = n2
+    } else if n1 > n2 {
+        grand = n1
+    }
+    return grand
+}
+
+func main() {
+    var resultat int
+    resultat = plusGrand2("Donnner un premier nombre: ", "Donner un deuxième nombre: ")
+    fmt.Print("Le nombre le plus grand est ", resultat)
+}
