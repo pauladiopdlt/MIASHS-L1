@@ -1,0 +1,15 @@
+package main
+
+import (
+    "fmt"
+)
+
+func calculerPrixPant(prix, reduc int) int {
+    return prix - (prix * reduc / 100)
+}
+
+func main() {
+    var resultat int
+    resultat = calculerPrixPant(50, 40)
+    fmt.Println("Resultat", resultat)
+}
