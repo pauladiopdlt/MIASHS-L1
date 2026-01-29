@@ -1,0 +1,42 @@
+package main
+
+import (
+    "fmt"
+)
+
+func calculatrice() int {
+    var nb1, nb2 int
+    var nombre = 0
+    var resultat int
+    fmt.Print("Ecrire un nombre: ")
+    fmt.Scan(&nb1)
+    fmt.Print("Ecrire un deuxième nombre: ")
+    fmt.Scan(&nb2)
+    fmt.Print("Ecrire un nombre entre 1 et 4: ")
+    fmt.Scan(&nombre)
+    if nombre < 4 && nombre > 1 {
+        if nombre == 1 {
+            resultat = nb1 + nb2
+        } else if nombre == 2 {
+            resultat = nb1 - nb2
+        } else if nombre == 3 {
+            resultat = nb1 * nb2
+        } else if nombre == 4 {
+            if nb2 != 0 {
+                resultat = nb1 / nb2
+            } else {
+                fmt.Print("Erreur: on ne peut pas diviser par 0. Ecrire le deuxième nombre correctement: ")
+                fmt.Scan(&nb2)
+                resultat = nb1 / nb2
+            }
+        }
+    }
+
+    return resultat
+}
+
+func main() {
+    var resultat int
+    resultat = calculatrice()
+    fmt.Print("Le résultat est ", resultat)
+}
